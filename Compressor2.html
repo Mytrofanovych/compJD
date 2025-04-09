@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Компресор  10PA17C для John Deere</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: green;
+            color: #333; 
+            text-align: center; 
+            margin: 0;
+            padding-top: 80px;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #2DE502;
+            padding: 1%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 1100;
+        }
+		
+		.header_logo a{
+			max-width: 450px;
+			width: 450px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: space-around;
+			justify-content: space-around;
+			align-content: center;
+			gap: 15px;
+			font-weight: bold;
+			text-decoration: none;
+			color: white;
+			justify-content: center;
+		}
+		
+		.header_logo {
+			max-width: 450px;
+			width: 450px;
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: space-around;
+			justify-content: space-between;
+			gap: 15px;
+			font-weight: bold;
+			text-decoration: none;
+			color: white;
+			justify-content: center;
+		}
+		
+        .header img {
+			margin: 0 30px 0 30px;
+			color: black;
+			max-width: 100px;
+			
+        }
+        .nav a {
+			flex-wrap: nowrap;
+			justify-content: space-around;
+			align-items: space-around;
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #ff5722;
+        }
+        .container { 
+            max-width: 1000px; 
+            margin: auto; 
+            padding: 30px;
+            background: white; 
+            border-radius: 15px; 
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+        }
+
+        .social a { 
+            margin: 0 10px; 
+            text-decoration: none; 
+            color: black; 
+            font-size: 18px; 
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: #grey;
+            transition: background 0.3s;
+			box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .social a:hover { background: #ff5722; }
+        .contact-btn a { 
+            display: inline-block; 
+            background: green; 
+            color: white; 
+            padding: 12px 25px; 
+            border-radius: 25px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 16px;
+            transition: background 0.3s;
+			box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .contact-btn a:hover {
+			background: yellow;
+			color: black
+		}
+		h3 { color: black; }
+		
+		.highlight {
+            color: red; /* Колір тексту */
+            font-weight: bold; /* Товщина тексту */
+			font-size: 32px;
+        }
+		
+		.highlight1 {
+            color: red; /* Колір тексту */
+            font-weight: bold; /* Товщина тексту */
+			font-size: 42px;
+        }
+		
+		.highlight2 {
+            color: red; /* Колір тексту */
+            font-weight: bold; /* Товщина тексту */
+			font-size: 18px;
+        }
+		
+		img {
+			max-width: 100%;
+			transform: scaleX(-1);
+		}
+
+		.contacts {
+			padding: 2rem 9%;
+		}
+
+		.contacts .heading {
+			text-align: center;
+			margin-bottom: 2rem;
+			color: black;
+			font-size: calc(25px + (70 - 25) * ((100vw - 300px) / (1600 - 300)));
+		}
+
+		.contacts .heading span {
+			color: orangered;
+		}
+
+		.contacts .row {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: nowrap;
+			gap: 1.5rem;
+		}
+
+		.contacts .row .img {
+			flex: 1 1 40rem;
+			mix-blend-mode: multiply;
+		}
+
+		.contacts .row form {
+			flex: 1 1 40rem;
+		}
+
+		.contacts .row form .box {
+			width: 100%;
+			margin: 1rem 0rem 2rem;
+			border-radius: 0.5rem;
+			padding: 0.8rem;
+		}
+
+		.contacts .row form span {
+			color: black;
+			font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
+		}
+
+		.btn {
+			padding: 1rem 3rem;
+			border-radius: 1.5rem;
+			box-shadow: 0 .5rem 1ren rgba(0,0,0,.7);
+			font-weight: 800;
+			cursor: pointer;
+			transition: 0.3s;
+			background: green;
+			color: white;
+		}
+
+		.btn:hover {
+			background-color: yellow;
+			color: black;
+		}
+
+		.burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 4px;
+            transition: 0.3s;
+        }
+/* Мобільна версія */
+		@media (max-width: 768px) {
+            nav {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                background-color: #333;
+                flex-direction: column;
+                width: 200px;
+                display: none;
+                padding: 20px;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .burger {
+                display: flex;
+            }
+			
+         @media (max-width: 500px) {
+		.header_logo {
+			max-width: 250px;
+			width: 250px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: space-around;
+			justify-content: space-between;
+			gap: 15px;
+			font-weight: bold;
+			text-decoration: none;
+			color: white;
+			justify-content: center;
+        }
+		
+		.container img {
+			max-width: 100%;
+		}
+		
+		.contacts .row {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 1.5rem;
+	}
+    </style>
+</head>
+<body>
+    <div class="header">
+		<div class="header_logo">
+			<img src="39733.png" alt="Логотип">
+			<a href="index.html">Компресори кондеціонера<br>John Deere</a>
+		</div>
+        <div class="nav">
+		<nav>
+            <a href="Compressor2.html">Купити</a>
+            <a href="index.html#specs">Характеристики</a>
+            <a href="index.html#why">Чому ми?</a>
+            <a href="index.html#contact">Контакти</a>
+		</nav>
+        </div>
+		 <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+	
+	<script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+    
+    <div class="container">
+		    <section class="contacts">
+
+			<h2 class="heading"><span>Зв'яжіться</span> з нами</h2>
+
+			<div class="row">
+
+				<div class="img">
+					<img src="img/contacts-img.png">
+				</div>
+
+				<form action="https://api.web3forms.com/submit" method="POST">
+
+					<input type="hidden" name="access_key" value="555735c2-253a-4054-b30a-fbdef92446f5">
+
+					<span>Ваше ім'я</span>
+					<input type="text" name="Ім'я" id="" class="box" required placeholder="Введіть ваше ім'я" autocomplete="off">
+
+					<span>Ваш номер телефону</span>
+					<input type="name" name="Номер телефону" id="" class="box" required placeholder="Введіть ваш номер телефону..." autocomplete="off">
+
+					<input type="submit" value="Надіслати" class="btn" name="Компресор 10PA17C">
+
+				</form>
+
+			</div>
+
+		</section>
+				<div class="social" id="contact">
+					<h2>Наші соцмережі:</h2>
+					<a href="https://www.instagram.com/mytrofanovych2025/">Instagram</a>
+					<a href="https://www.facebook.com/profile.php?id=61572630134720">Facebook</a>
+					<a href="https://www.youtube.com/@M1TRoFaNoV1CH">YouTube</a>
+		</div>
+    </div>
+</body>
+</html>
